@@ -4,15 +4,19 @@ import App from './app/layout/App';
 import reportWebVitals from './reportWebVitals';
 import 'semantic-ui-css/semantic.min.css'
 import './app/layout/style.css';
+import { store, StoreContext } from './app/stores/store';
+import { createRoot } from 'react-dom/client';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const el = document.getElementById('root')
+if (el === null) throw new Error('Root container missing in index.html')
+
+const root = ReactDOM.createRoot(el)
+
 root.render(
-  <React.StrictMode>
+  <StoreContext.Provider value={store}>
     <App />
-  </React.StrictMode>
-);
+  </StoreContext.Provider>,
+)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
