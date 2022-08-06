@@ -5,8 +5,6 @@ import reportWebVitals from './reportWebVitals';
 import 'semantic-ui-css/semantic.min.css'
 import './app/layout/style.css';
 import { store, StoreContext } from './app/stores/store';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
 
 const el = document.getElementById('root')
 if (el === null) throw new Error('Root container missing in index.html')
@@ -15,9 +13,7 @@ const root = ReactDOM.createRoot(el)
 
 root.render(
   <StoreContext.Provider value={store}>
-    <BrowserRouter>
       <App />
-    </BrowserRouter>
   </StoreContext.Provider>,
 )
 
