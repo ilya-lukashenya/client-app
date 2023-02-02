@@ -6,6 +6,7 @@ import 'semantic-ui-css/semantic.min.css'
 import './app/layout/style.css';
 import { store, StoreContext } from './app/stores/store';
 import { BrowserRouter } from 'react-router-dom';
+import 'react-calendar/dist/Calendar.css';
 
 const el = document.getElementById('root')
 if (el === null) throw new Error('Root container missing in index.html')
