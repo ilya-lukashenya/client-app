@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './app/layout/App';
 import reportWebVitals from './reportWebVitals';
 import 'semantic-ui-css/semantic.min.css'
+import 'react-datepicker/dist/react-datepicker.css'
 import './app/layout/style.css';
 import { store, StoreContext } from './app/stores/store';
 import { BrowserRouter } from 'react-router-dom';
